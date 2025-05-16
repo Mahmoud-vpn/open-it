@@ -1,0 +1,50 @@
+body {
+  margin: 0;
+  background-color: black;
+  overflow: hidden;
+  height: 100vh;
+  font-family: 'Parisienne', cursive; /* هنا غيرنا الخط */
+  color: white;
+}
+
+
+.container {
+  text-align: center;
+  position: relative;
+  top: 20%;
+}
+#ring {
+  width: 220px; /* حجم أكبر */
+  height: auto;
+  opacity: 0;
+  transform: translateY(-30px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+#message {
+  font-size: 50px;
+  margin-top: 25px;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+/* الورود المتساقطة */
+.flower {
+  position: fixed;
+  top: -50px;
+  font-size: 24px;
+  animation: fall linear infinite;
+  z-index: 0;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(110vh) rotate(360deg);
+    opacity: 0.7;
+  }
+}
+#ring {
+  width: 220px; /* حجم أكبر */
+  height: auto;
+  opacity: 0;
+  transform: translateY(-30px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
